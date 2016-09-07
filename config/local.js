@@ -32,13 +32,13 @@ module.exports = {
   // The full base url at which your site will be primarily available.
   // Include an http:// prefix
   // ex. 'http://my-site.com'
-  appUrl: 'SITE_URL',
+  appUrl: 'http://ls-update-alt.herokuapp.com',
 
   auth: {
     // Provide a set of credentials that can be used to access the admin interface.
     static: {
-      username: 'STATIC_USERNAME',
-      password: 'STATIC_PASSWORD'
+      username: 'MTRNord',
+      password: process.env.PASSWORD
     },
     // You can also specify an ldap connection that can be used for authentication.
     //ldap: {
@@ -56,7 +56,7 @@ module.exports = {
   jwt: {
     // Recommended: 63 random alpha-numeric characters
     // Generate using: https://www.grc.com/passwords.htm
-    token_secret: 'INSERT_RANDOM_TOKEN_KEY'
+    token_secret: ')sMQ{k?fDa,4a7I,+~_Y<,9=Z1Ob~vY?Ao}GW:MYku@5O&`+a>Z7+j5|g/Vw?,9'
   },
 
   connections: {
