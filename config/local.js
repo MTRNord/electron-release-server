@@ -56,23 +56,23 @@ module.exports = {
   jwt: {
     // Recommended: 63 random alpha-numeric characters
     // Generate using: https://www.grc.com/passwords.htm
-    token_secret: ')sMQ{k?fDa,4a7I,+~_Y<,9=Z1Ob~vY?Ao}GW:MYku@5O&`+a>Z7+j5|g/Vw?,9'
+    token_secret: 'HeqNNorFhu4PujAZUwkjnlWcSqscSbidbvm1NIzIBtg0sOr9QXQbOqayaucroM0'
   },
 
   connections: {
     postgresql: {
       adapter: 'sails-postgresql',
-      host: 'DATABASE_HOST',
-      user: 'DATABASE_USERNAME',
-      password: 'DATABASE_PASSWORD',
-      database: 'MAIN_DATABASE_NAME'
+      host: process.env.PSQL_HOST,
+      user: process.env.PSQL_USER,
+      password: process.env.PSQL_PASS,
+      database: process.env.PSQL_DB
     }
   },
 
   session: {
     // Recommended: 63 random alpha-numeric characters
     // Generate using: https://www.grc.com/passwords.htm
-    secret: 'SESSION_SECRET',
+    secret: 'g7g2tKtA8sWNcgVhzcQgPithbzhATeuLlS2pElnzoAivrjufOuSNYFEZIn9y7qa',
     database: 'SESSION_DATABASE_NAME',
     host: 'DATABASE_HOST',
     user: 'DATABASE_USERNAME',
@@ -82,7 +82,7 @@ module.exports = {
 
   files: {
     // Folder must exist and user running the server must have adequate perms
-    dirname: 'PATH_FOR_ASSETS',
+    dirname: 'assets',
     // Maximum allowed file size in bytes
     // Defaults to 500MB
     // maxBytes: 524288000
